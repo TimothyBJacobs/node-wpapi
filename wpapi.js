@@ -74,7 +74,8 @@ function WPAPI( options ) {
 
 	this._options = {
 		// Ensure trailing slash on endpoint URI
-		endpoint: options.endpoint.replace(  /\/?$/, '/' )
+		endpoint: options.endpoint.replace(  /\/?$/, '/' ),
+		populate: options.populate || {}
 	};
 
 	// If any authentication credentials were provided, assign them now
